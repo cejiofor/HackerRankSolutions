@@ -1,5 +1,13 @@
 import java.util.Comparator;
+class Player {
+	String name;
+	int score;
 
+	Player(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
+}
 class ComparatorChecker implements Comparator<Player> {
     // complete this method
     // public int compare(Player a, Player b) {
