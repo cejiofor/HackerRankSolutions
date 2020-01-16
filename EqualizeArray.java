@@ -1,6 +1,6 @@
-package hackerranck;
+import java.util.*;
 
-public class EqualizeArray{
+public class EqualizeArray {
     // Complete the equalizeArray function below.
     static int equalizeArray(int[] arr) {
         Map<Integer, Integer> arrCount = new HashMap<Integer, Integer>();

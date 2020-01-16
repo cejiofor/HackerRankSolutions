@@ -1,7 +1,3 @@
-package hackerranck;
-
-import java.util.List;
-
 public class RepeatedString {
 	static long repeatedString(String s, long n) {
         long count =0;
