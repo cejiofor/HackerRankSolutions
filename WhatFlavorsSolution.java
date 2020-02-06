@@ -1,3 +1,5 @@
+package com.hackerrank;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,7 +17,7 @@ public class WhatFlavorsSolution{
         for (int i=0; i<cost.length; i++){
             currentCost = cost[i];
             moneyMatch = money - currentCost;
-            if (costMap.containsKey(currentCost){
+            if (costMap.containsKey(currentCost)){
                 // if the current cost is in map, get value which is the index of money-currentCost
                 // Print index of value in map with current index
                 System.out.println(costMap.get(currentCost)+ " "+ (i+1));
