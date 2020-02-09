@@ -1,3 +1,5 @@
+package com.hackerrank;
+
 public class MakeAnagram {
 
     // Complete the makeAnagram function below.
