@@ -1,3 +1,5 @@
+package com.hackerrank;
+
 public class CountSwaps{
     // Complete the countSwaps function below.
     static void countSwaps(int[] a) {

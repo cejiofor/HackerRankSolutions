@@ -1,3 +1,5 @@
+package com.hackerrank;
+
 import java.util.*;
 
 public class EqualizeArray {

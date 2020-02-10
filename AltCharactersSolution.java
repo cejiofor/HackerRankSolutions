@@ -1,3 +1,5 @@
+package com.hackerrank;
+
 public class AltCharactersSolution {
 
     // Complete the alternatingCharacters function below.

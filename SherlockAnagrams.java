@@ -15,8 +15,12 @@ public class SherlockAnagrams {
                 subStrList.add(subStr);
             }
         }
-        for(String str: subStrList){
-            System.out.println(str);
+        for (int i=0; i<subStrList.size(); i++){
+            for (int j=i+1; j<subStrList.size(); j++){
+                if (isAnagram(subStrList.get(i), subStrList.get(j))){
+                    anagramCount++;
+                }
+            }
         }
 
         return anagramCount;
@@ -26,18 +30,19 @@ public class SherlockAnagrams {
     static boolean isAnagram(String a, String b){
         StringBuilder aSB = new StringBuilder(a);
         StringBuilder bSB = new StringBuilder(b);
-        int uniqueChars = 0;
+        int strAChars = aSB.length();
         for (int i = 0; i<aSB.length(); i++){
             int charIndex = bSB.indexOf(""+aSB.charAt(i));
             if (charIndex != -1){
-
+                bSB.deleteCharAt(charIndex);
+                strAChars--;
             }
         }
-
+        return (bSB.length() == 0 && strAChars == 0);
     }
 
     public static void main(String[] args) {
-//        System.out.println(sherlockAndAnagrams("ifailuhkqq"));
+        System.out.println(sherlockAndAnagrams("ifailuhkqq"));
         System.out.println(sherlockAndAnagrams("kkkk"));
     }
 }
