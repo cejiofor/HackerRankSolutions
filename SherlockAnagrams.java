@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SherlockAnagrams {
-    //First Solution - inefficient
+    //First Solution - inefficient, failed due to time out
     static int sherlockAndAnagrams(String s) {
         List<String> subStrList = new ArrayList<>();
         String subStr;
@@ -22,16 +22,14 @@ public class SherlockAnagrams {
                 }
             }
         }
-
         return anagramCount;
-
     }
 
     static boolean isAnagram(String a, String b){
         StringBuilder aSB = new StringBuilder(a);
         StringBuilder bSB = new StringBuilder(b);
         int strAChars = aSB.length();
-        for (int i = 0; i<aSB.length(); i++){
+        for (int i = 0; i<aSB.length(); i++) {
             int charIndex = bSB.indexOf(""+aSB.charAt(i));
             if (charIndex != -1){
                 bSB.deleteCharAt(charIndex);
@@ -44,5 +42,6 @@ public class SherlockAnagrams {
     public static void main(String[] args) {
         System.out.println(sherlockAndAnagrams("ifailuhkqq"));
         System.out.println(sherlockAndAnagrams("kkkk"));
+        System.out.println(sherlockAndAnagrams("cdcd"));
     }
 }
